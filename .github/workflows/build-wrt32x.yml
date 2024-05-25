@@ -19,6 +19,7 @@ on:
 jobs:
   trigger-nightly-builds:
     if: github.event != 'workflow_dispatch'
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - name: Emit repository_dispatch
